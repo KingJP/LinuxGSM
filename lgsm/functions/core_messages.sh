@@ -280,7 +280,7 @@ fn_prompt_yn(){
 	elif [ "${initial}" == "N" ]; then
 	#	prompt+=" [y/N] "
 	return 0
-	else
+	# else
 	#	prompt+=" [y/n] "
 	fi
 	
