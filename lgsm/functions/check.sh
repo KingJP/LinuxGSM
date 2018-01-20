@@ -10,7 +10,7 @@ local commandname="CHECK"
 # Every command that requires checks just references check.sh
 # check.sh selects which checks to run by using arrays
 
-check_root.sh
+# check_root.sh
 check_tmuxception.sh
 
 if [ "${function_selfname}" != "command_monitor.sh" ]; then
