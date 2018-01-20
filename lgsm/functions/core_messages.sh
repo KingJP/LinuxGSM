@@ -282,8 +282,9 @@ fn_prompt_yn(){
 	return 0
 	else
 	#	prompt+=" [y/n] "
-	return 1	
 	fi
+	
+	return 1
 
 	# while true; do
 	#	read -e -i "${initial}" -p  "${prompt}" -r yn
