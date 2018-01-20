@@ -260,15 +260,15 @@ fn_install_file(){
 }
 
 # Prevent from running this script as root.
-if [ "$(whoami)" == "root" ]; then
-	if [ ! -f "${functionsdir}/core_functions.sh" ]||[ ! -f "${functionsdir}/check_root.sh" ]||[ ! -f "${functionsdir}/core_messages.sh" ]; then
-		echo "[ FAIL ] Do NOT run this script as root!"
-		exit 1
-	else
+# if [ "$(whoami)" == "root" ]; then
+#	if [ ! -f "${functionsdir}/core_functions.sh" ]||[ ! -f "${functionsdir}/check_root.sh" ]||[ ! -f "${functionsdir}/core_messages.sh" ]; then
+#		echo "[ FAIL ] Do NOT run this script as root!"
+#		exit 1
+#	else
 		core_functions.sh
-		check_root.sh
-	fi
-fi
+#		check_root.sh
+#	fi
+#fi
 
 # LinuxGSM installer mode
 if [ "${shortname}" == "core" ]; then
