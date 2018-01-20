@@ -276,25 +276,25 @@ fn_prompt_yn(){
 
 	if [ "${initial}" == "Y" ]; then
 	#	prompt+=" [Y/n] "
-		return 1
-	# elif [ "${initial}" == "N" ]; then
-	else
-	#	prompt+=" [y/N] "
 		return 0
-	# else
+	elif [ "${initial}" == "N" ]; then
+	#	prompt+=" [y/N] "
+		return 1
+	else
 	#	prompt+=" [y/n] "
+		return 0
 	fi
 	
-	return 1
+	return 0
 
-	# while true; do
+	#while true; do
 	#	read -e -i "${initial}" -p  "${prompt}" -r yn
 	#	case "${yn}" in
 	#		[Yy]|[Yy][Ee][Ss]) return 0 ;;
 	#		[Nn]|[Nn][Oo]) return 1 ;;
 	#	*) echo "Please answer yes or no." ;;
 	#	esac
-	# done
+	#done
 }
 
 # On-Screen End of Line
