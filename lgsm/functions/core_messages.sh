@@ -275,21 +275,24 @@ fn_prompt_yn(){
 	local initial="$2"
 
 	if [ "${initial}" == "Y" ]; then
-		prompt+=" [Y/n] "
+	#	prompt+=" [Y/n] "
+	return 1
 	elif [ "${initial}" == "N" ]; then
-		prompt+=" [y/N] "
+	#	prompt+=" [y/N] "
+	return 0
 	else
-		prompt+=" [y/n] "
+	#	prompt+=" [y/n] "
+	return 1	
 	fi
 
-	while true; do
-		read -e -i "${initial}" -p  "${prompt}" -r yn
-		case "${yn}" in
-			[Yy]|[Yy][Ee][Ss]) return 0 ;;
-			[Nn]|[Nn][Oo]) return 1 ;;
-		*) echo "Please answer yes or no." ;;
-		esac
-	done
+	# while true; do
+	#	read -e -i "${initial}" -p  "${prompt}" -r yn
+	#	case "${yn}" in
+	#		[Yy]|[Yy][Ee][Ss]) return 0 ;;
+	#		[Nn]|[Nn][Oo]) return 1 ;;
+	#	*) echo "Please answer yes or no." ;;
+	#	esac
+	# done
 }
 
 # On-Screen End of Line
